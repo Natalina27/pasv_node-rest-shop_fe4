@@ -12,19 +12,19 @@ router.get("/", (req, res, next) => {
         const response = {
           count: docs.length,
           products: docs.map(doc => {
-            return{
+            return {
               name: doc.name,
               price: doc.price,
               _id: doc._id,
-              request:{
+              request: {
                 type: 'GET',
                 url: 'http://localhost:3000/products/' + doc._id
               }
             }
           })
         };
-            // if (docs.length >= 0) {
-            res.status(200).json(response);
+        // if (docs.length >= 0) {
+        res.status(200).json(response);
         // } else {
         //     res.status(404).json({
         //         message: 'No entries found'
@@ -82,7 +82,8 @@ router.get("/:productId", (req, res, next) => {
             product: doc,
             request: {
               type: 'GET',
-              url: 'http://localhost/products'
+              description: 'Get all products',
+              url: 'http://localhost:3000/products'
             }
           });
         } else {
@@ -106,8 +107,13 @@ router.patch("/:productId", (req, res, next) => {
   Product.update({_id: id}, {$set: updateOps})
       .exec()
       .then(result => {
-        console.log(result);
-        res.status(200).json(result);
+        res.status(200).json({
+          message: 'Product updated',
+          request: {
+            type: 'GET',
+            url: 'http://localhost:3000/products/' + id
+          }
+        });
       })
       .catch(err => {
         console.log(err);
@@ -122,7 +128,14 @@ router.delete("/:productId", (req, res, next) => {
   Product.remove({_id: id})
       .exec()
       .then(result => {
-        res.status(200).json(result);
+        res.status(200).json({
+          message: 'Product deleted',
+          request: {
+            type: 'POST',
+            url: 'http://localhost:3000/products',
+            body: { name: 'String', price: 'Number'}
+          }
+        });
       })
       .catch(err => {
         console.log(err);
