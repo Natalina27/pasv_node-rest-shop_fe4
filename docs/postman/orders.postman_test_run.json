@@ -1,0 +1,106 @@
+{
+	"id": "7081ee43-157b-4909-8c82-2231967c03a8",
+	"name": "orders",
+	"timestamp": "2020-09-18T14:47:28.231Z",
+	"collection_id": "eca1c810-927c-4d5e-86fd-11bafc91c403",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "0029db99-475d-4b00-8b0b-8357ffbf8ae3",
+			"name": "localhost:3000/orders",
+			"url": "http://localhost:3000/orders/",
+			"time": 18,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				18
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e659d895-be6d-4d7d-87e3-de313b05fb99",
+			"name": "localhost:3000/orders",
+			"url": "http://localhost:3000/orders",
+			"time": 42,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				42
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2d3b6871-7702-4729-8e71-00ad063859cf",
+			"name": "localhost:3000/orders/id",
+			"url": "http://localhost:3000/orders/someOrderId",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "be1d3011-5088-413c-8d18-238b3b17f4b6",
+			"name": "localhost:3000/orders/id",
+			"url": "http://localhost:3000/",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 68,
+	"collection": {
+		"requests": [
+			{
+				"id": "0029db99-475d-4b00-8b0b-8357ffbf8ae3",
+				"method": "GET"
+			},
+			{
+				"id": "e659d895-be6d-4d7d-87e3-de313b05fb99",
+				"method": "POST"
+			},
+			{
+				"id": "2d3b6871-7702-4729-8e71-00ad063859cf",
+				"method": "GET"
+			},
+			{
+				"id": "be1d3011-5088-413c-8d18-238b3b17f4b6",
+				"method": "POST"
+			}
+		]
+	}
+}

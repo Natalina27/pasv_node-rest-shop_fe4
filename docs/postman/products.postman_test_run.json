@@ -1,0 +1,106 @@
+{
+	"id": "ada9481f-d52e-4f99-af2a-48a882617c79",
+	"name": "products",
+	"timestamp": "2020-09-18T14:46:46.516Z",
+	"collection_id": "e948f817-c979-43e7-be0c-5addc64161d0",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ae6cac2d-e9a4-4b9a-a492-0a4e4a339329",
+			"name": "localhost:3000/products",
+			"url": "http://localhost:3000/products",
+			"time": 94,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				94
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "211e7d0c-f184-4268-b8e7-5cd5ddd79498",
+			"name": "localhost:3000/products/special",
+			"url": "http://localhost:3000/products/5f5cd6a5472b6d1a75634ffa",
+			"time": 27,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				27
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2d9d4275-119c-4048-9e60-72afbd7958c8",
+			"name": "localhost:3000/products/id",
+			"url": "http://localhost:3000/orders",
+			"time": 20,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d5fe516a-bd51-466e-933e-5fc9e22aef0a",
+			"name": "localhost:3000/products",
+			"url": "http://localhost:3000/products/5f5aada0b4414d42fad4064a",
+			"time": 10,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 151,
+	"collection": {
+		"requests": [
+			{
+				"id": "ae6cac2d-e9a4-4b9a-a492-0a4e4a339329",
+				"method": "POST"
+			},
+			{
+				"id": "211e7d0c-f184-4268-b8e7-5cd5ddd79498",
+				"method": "DELETE"
+			},
+			{
+				"id": "2d9d4275-119c-4048-9e60-72afbd7958c8",
+				"method": "GET"
+			},
+			{
+				"id": "d5fe516a-bd51-466e-933e-5fc9e22aef0a",
+				"method": "PATCH"
+			}
+		]
+	}
+}

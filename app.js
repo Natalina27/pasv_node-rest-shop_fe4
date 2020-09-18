@@ -1,13 +1,14 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 
-const productRoutes = require('./api/routes/products');
-const orderRoutes = require('./api/routes/orders');
-const userRoutes = require('./api/routes/users');
+const productRoutes = require("./api/routes/products");
+const orderRoutes = require("./api/routes/orders");
+const userRoutes = require("./api/routes/user");
 
+mongoose.set('useCreateIndex', true);
 mongoose.connect(
     'mongodb+srv://admin:'+process.env.MONGO_ATLAS_PW+'@node-rest-shop.3af3f.mongodb.net/?retryWrites=true&w=majority',
     {
@@ -18,7 +19,7 @@ mongoose.connect(
 
 mongoose.Promise = global.Promise;
 
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());

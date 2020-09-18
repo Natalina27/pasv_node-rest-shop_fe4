@@ -13,7 +13,8 @@ router.post("/signup", (req, res, next) => {
         if (user.length >= 1) {
           return res.status(409).json({
             message: "Mail exists"
-          });
+          }
+          );
         } else {
           bcrypt.hash(req.body.password, 10, (err, hash) => {
             if (err) {
@@ -45,6 +46,7 @@ router.post("/signup", (req, res, next) => {
         }
       });
 });
+
 router.post("/login", (req, res, next) => {
   User.find({ email: req.body.email })
       .exec()

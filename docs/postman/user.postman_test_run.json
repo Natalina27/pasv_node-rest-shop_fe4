@@ -1,0 +1,62 @@
+{
+	"id": "ca33138b-0fb1-49a1-947f-3e14430d4ecd",
+	"name": "user",
+	"timestamp": "2020-09-18T14:47:56.433Z",
+	"collection_id": "e6d51517-9d10-4a16-9b5b-7474f0016e52",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ecd61eb2-38e8-4f0a-b1c7-c4ac1a6caa00",
+			"name": "localhost:3000/user/login",
+			"url": "http://localhost:3000/user/login",
+			"time": 247,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				247
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "81af9fd3-310a-45a1-ac5b-b3502a69e0f0",
+			"name": "localhost:3000/user/signup",
+			"url": "http://localhost:3000/user/signup",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 253,
+	"collection": {
+		"requests": [
+			{
+				"id": "ecd61eb2-38e8-4f0a-b1c7-c4ac1a6caa00",
+				"method": "POST"
+			},
+			{
+				"id": "81af9fd3-310a-45a1-ac5b-b3502a69e0f0",
+				"method": "POST"
+			}
+		]
+	}
+}
