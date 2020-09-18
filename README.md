@@ -2,6 +2,7 @@
 npm install nodemon --save //for automatic refresh
 npm install --save morgan //for log into terminal
 npm install --save body-parser //
+npm install --save mongoose //
 
 npm install bcrypt  //to crypt password
 npm i jsonwebtoken --save //token generator
