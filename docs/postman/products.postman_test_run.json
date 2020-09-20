@@ -1,7 +1,7 @@
 {
-	"id": "ada9481f-d52e-4f99-af2a-48a882617c79",
+	"id": "0a29b644-ccc0-4527-ae4f-1c2517c51a45",
 	"name": "products",
-	"timestamp": "2020-09-18T14:46:46.516Z",
+	"timestamp": "2020-09-20T15:27:46.841Z",
 	"collection_id": "e948f817-c979-43e7-be0c-5addc64161d0",
 	"folder_id": 0,
 	"environment_id": "0",
@@ -9,18 +9,72 @@
 	"totalFail": 0,
 	"results": [
 		{
-			"id": "ae6cac2d-e9a4-4b9a-a492-0a4e4a339329",
-			"name": "localhost:3000/products",
+			"id": "165289ff-8878-4ba8-97d8-3391000e3470",
+			"name": "localhost:3000//products",
 			"url": "http://localhost:3000/products",
-			"time": 94,
+			"time": 1081,
 			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				94
+				1081
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ae6cac2d-e9a4-4b9a-a492-0a4e4a339329",
+			"name": "localhost:3000/products",
+			"url": "http://localhost:3000/products",
+			"time": 201,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				201
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2d9d4275-119c-4048-9e60-72afbd7958c8",
+			"name": "localhost:3000/products/id",
+			"url": "http://localhost:3000/products/id",
+			"time": 110,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				110
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d5fe516a-bd51-466e-933e-5fc9e22aef0a",
+			"name": "localhost:3000/products",
+			"url": "http://localhost:3000/products/123",
+			"time": 13,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
 			],
 			"allTests": [
 				{}
@@ -30,51 +84,15 @@
 			"id": "211e7d0c-f184-4268-b8e7-5cd5ddd79498",
 			"name": "localhost:3000/products/special",
 			"url": "http://localhost:3000/products/5f5cd6a5472b6d1a75634ffa",
-			"time": 27,
+			"time": 207,
 			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
+				"code": 200,
+				"name": "OK"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				27
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "2d9d4275-119c-4048-9e60-72afbd7958c8",
-			"name": "localhost:3000/products/id",
-			"url": "http://localhost:3000/orders",
-			"time": 20,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				20
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "d5fe516a-bd51-466e-933e-5fc9e22aef0a",
-			"name": "localhost:3000/products",
-			"url": "http://localhost:3000/products/5f5aada0b4414d42fad4064a",
-			"time": 10,
-			"responseCode": {
-				"code": 401,
-				"name": "Unauthorized"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				10
+				207
 			],
 			"allTests": [
 				{}
@@ -82,16 +100,16 @@
 		}
 	],
 	"count": 1,
-	"totalTime": 151,
+	"totalTime": 1612,
 	"collection": {
 		"requests": [
 			{
-				"id": "ae6cac2d-e9a4-4b9a-a492-0a4e4a339329",
-				"method": "POST"
+				"id": "165289ff-8878-4ba8-97d8-3391000e3470",
+				"method": "GET"
 			},
 			{
-				"id": "211e7d0c-f184-4268-b8e7-5cd5ddd79498",
-				"method": "DELETE"
+				"id": "ae6cac2d-e9a4-4b9a-a492-0a4e4a339329",
+				"method": "POST"
 			},
 			{
 				"id": "2d9d4275-119c-4048-9e60-72afbd7958c8",
@@ -100,6 +118,10 @@
 			{
 				"id": "d5fe516a-bd51-466e-933e-5fc9e22aef0a",
 				"method": "PATCH"
+			},
+			{
+				"id": "211e7d0c-f184-4268-b8e7-5cd5ddd79498",
+				"method": "DELETE"
 			}
 		]
 	}
