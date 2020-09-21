@@ -8,7 +8,8 @@ const Product = require("../models/product");
 // Handle incoming GET requests to /orders
 router.get('/', (req, res) => {
   Order.find()
-      .select("product quantity _id name")
+      .select("product quantity _id")
+      .populate('product', 'name')
       .exec()
       .then(docs => {
         res.status(200).json({
@@ -17,7 +18,6 @@ router.get('/', (req, res) => {
             return {
               _id: doc._id,
               product: doc.product,
-              name: doc.name,
               quantity: doc.quantity,
               request: {
                 type: "GET",
@@ -58,7 +58,6 @@ router.post('/', (req, res) => {
             _id: result._id,
             product: result.product,
             quantity: result.quantity,
-            name: result.name
           },
           request: {
             type: "GET",
@@ -76,6 +75,7 @@ router.post('/', (req, res) => {
 
 router.get('/:orderId', (req, res) => {
   Order.findById(req.params.orderId)
+      .populate('product')
       .exec()
       .then(order => {
         if (!order) {
