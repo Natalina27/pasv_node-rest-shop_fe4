@@ -33,7 +33,7 @@ const Product = require("../models/product");
 
 router.get('/', (req, res) => {
   Product.find()
-      .select("name price _id")
+      .select("name price _id productImage")
       .exec()
       .then(docs => {
         const response = {
@@ -101,7 +101,7 @@ router.post("/", upload.single('productImage'), (req, res) => {
 router.get('/:productId', (req, res) => {
   const id = req.params.productId;
   Product.findById(id)
-      .select('name price _id')
+      .select('name price _id productImage')
       .exec()
       .then(doc => {
         console.log("From database", doc);
