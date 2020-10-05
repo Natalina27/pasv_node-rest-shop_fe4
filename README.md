@@ -9,3 +9,6 @@ npm i jsonwebtoken --save //token generator
 
 for decoding token:
 https://jwt.io/
+
+for upload images:
+npm i --save multer
