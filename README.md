@@ -12,3 +12,4 @@ https://jwt.io/
 
 for upload images:
 npm i --save multer
+npm i bcrypt --save
